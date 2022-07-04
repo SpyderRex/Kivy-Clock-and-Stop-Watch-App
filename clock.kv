@@ -1,0 +1,52 @@
+
+
+
+BoxLayout:
+    orientation: "vertical"
+    
+    Label:
+        id: date
+        text: ""
+        font_name: "Roboto"
+        font_size: 60
+        markup: True
+
+    Label:
+        id: time
+        text: "[b]00[/b]:00:00"
+        font_name: "Roboto"
+        font_size: 60
+        markup: True
+
+    BoxLayout:
+        height: 120
+        orientation: "horizontal"
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+            
+        Button:
+            id: start_stop
+            text: "Start"
+            font_size: 25
+            bold: True
+            background_normal: "BackgroundNormal.jpeg"
+            background_down: "BackgroundDown.png"
+            on_press: app.start_stop()
+
+        Button:
+            id: reset
+            text: "Reset"
+            font_size: 25
+            bold: True
+            background_normal: "BackgroundNormal.jpeg"
+            background_down: "BackgroundDown.png"
+            on_press: app.reset()
+            
+
+    Label:
+        id: stopwatch
+        font_name: "Roboto"
+        text: "00:00.[size=40]00[/size]"
+        font_size: 100
+        markup: True
